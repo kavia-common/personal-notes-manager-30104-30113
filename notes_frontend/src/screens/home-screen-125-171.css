@@ -1,0 +1,148 @@
+:root {
+  /* Colors from design system */
+  --color-252525: #252525;
+  --color-ff9e9e: #ff9e9e;
+  --color-000000: #000000;
+  --color-91f48f: #91f48f;
+  --color-fff599: #fff599;
+  --color-ffffff: #ffffff;
+  --color-3b3b3b: #3b3b3b;
+  --color-9effff: #9effff;
+  --color-b69cff: #b69cff;
+  --color-fd99ff: #fd99ff;
+  --color-ff0000: #ff0000;
+  --color-c4c4c4: #c4c4c4;
+  --color-cfcfcf: #cfcfcf;
+  --color-9a9a9a: #9a9a9a;
+  --color-263238: #263238;
+  --color-d4d6d7: #d4d6d7;
+  --color-7f8a8e: #7f8a8e;
+  --color-3b464c: #3b464c;
+  --color-4fb6b2: #4fb6b2;
+  --color-d0d0d0: #d0d0d0;
+  --color-606060: #606060;
+  --color-30be71: #30be71;
+  --color-cccccc: #cccccc;
+  --color-f4f5d5: #f4f5d5;
+
+  /* Typography from design system (only those used directly) */
+  --typo-13-family: Nunito, Arial, sans-serif;
+  --typo-13-size: 25px;
+  --typo-13-weight: 400;
+  --typo-13-line-height: 34.0999984741px;
+  --typo-13-letter-spacing: 0px;
+  --typo-13-text-align: left;
+  --typo-13-color: var(--color-000000);
+
+  --typo-14-family: Nunito, Arial, sans-serif;
+  --typo-14-size: 43px;
+  --typo-14-weight: 600;
+  --typo-14-line-height: 58.6519966125px;
+  --typo-14-letter-spacing: 0px;
+  --typo-14-text-align: left;
+  --typo-14-color: var(--color-ffffff);
+}
+
+/* Screen root matches frame 414x1100 with background style_0 */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-252525);
+}
+.screen {
+  position: relative;
+  width: 414px;
+  height: 1100px;
+  margin: 0 auto;
+  background: var(--color-252525);
+  border-radius: 30px; /* style_0 border_radius */
+  overflow: hidden;
+}
+
+/* Shared primitives */
+.rectangle, .ellipse, .button, .component, .text {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/* Styles (resolved from design_system.styles) */
+.style-1 { /* style_1 */
+  background: var(--color-ff9e9e);
+  border-radius: 10px;
+}
+.style-2 { /* style_2 background_color black (text elements won't use bg) */
+  /* background: var(--color-000000); */ /* not applied to text */
+}
+.style-3 { /* style_3 */
+  background: var(--color-91f48f);
+  border-radius: 10px;
+}
+.style-4 { /* style_4 */
+  background: var(--color-fff599);
+  border-radius: 10px;
+}
+.style-5 { /* for white text/icon placeholder */
+  /* background: var(--color-ffffff); */
+}
+.style-6 { /* button bg */
+  background: var(--color-3b3b3b);
+  border-radius: 15px;
+}
+.style-7 {
+  background: var(--color-9effff);
+  border-radius: 10px;
+}
+.style-8 {
+  background: var(--color-b69cff);
+  border-radius: 10px;
+}
+.style-39 { /* ellipse with shadows */
+  background: var(--color-252525);
+  border-radius: 60px;
+  /* shadows shadow_0 and shadow_1 */
+  box-shadow:
+    -5px 0px 10px 0px #000000,
+    0px 5px 10px 0px #000000;
+}
+
+/* Typography classes */
+.typo-13 {
+  font-family: var(--typo-13-family);
+  font-size: var(--typo-13-size);
+  font-weight: var(--typo-13-weight);
+  line-height: var(--typo-13-line-height);
+  letter-spacing: var(--typo-13-letter-spacing);
+  text-align: var(--typo-13-text-align);
+  color: var(--typo-13-color);
+  margin: 0;
+}
+.typo-14 {
+  font-family: var(--typo-14-family);
+  font-size: var(--typo-14-size);
+  font-weight: var(--typo-14-weight);
+  line-height: var(--typo-14-line-height);
+  letter-spacing: var(--typo-14-letter-spacing);
+  text-align: var(--typo-14-text-align);
+  color: var(--typo-14-color);
+  margin: 0;
+}
+
+/* Ellipse shape for non-img fallback */
+.ellipse {
+  border-radius: 50%;
+}
+
+/* Images within elements take full specified sizes */
+.rectangle img,
+.ellipse img,
+.button img,
+.component img {
+  display: block;
+}
+
+/* Accessibility helpers for components */
+.component.info-outline img,
+.component.search img,
+.component.add img {
+  pointer-events: none;
+}

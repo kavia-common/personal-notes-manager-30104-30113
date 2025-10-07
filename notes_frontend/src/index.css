@@ -1,3 +1,4 @@
+/* Base resets and font smoothing */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +8,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Monospace code font */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* The HomeScreen125171 component imports its own CSS for pixel-perfect layout.
+   If you prefer global loading, uncomment the line below. */
+/* @import url('../assets/home-screen-125-171.css'); */
